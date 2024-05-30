@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Joke</title>
+</head>
+<body>
+    <h1>添加新的笑話</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">保存</button>
+    </form>
+    <a href="{% url 'joke_list' %}">返回列表</a>
+</body>
+</html>

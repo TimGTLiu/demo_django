@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Joke</title>
+</head>
+<body>
+    <h1>刪除笑話</h1>
+    <p>你確定要刪除這個笑話嗎？</p>
+    <p>{{ joke.content }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">刪除</button>
+    </form>
+    <a href="{% url 'joke_list' %}">取消</a>
+</body>
+</html>

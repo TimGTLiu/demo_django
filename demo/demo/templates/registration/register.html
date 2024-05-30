@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>註冊</title>
+</head>
+<body>
+    <h2>註冊</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">註冊</button>
+    </form>
+    <a href="{% url 'login' %}">已經有帳號了？點此登錄</a>
+</body>
+</html>

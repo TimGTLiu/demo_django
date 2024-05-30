@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登錄</title>
+</head>
+<body>
+    <h2>登錄</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">登錄</button>
+    </form>
+    <a href="{% url 'password_reset' %}">忘記密碼？</a>
+    <a href="{% url 'register' %}">註冊新帳號</a>
+</body>
+</html>
